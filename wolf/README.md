@@ -1,0 +1,1 @@
+sample sprites for wolf
