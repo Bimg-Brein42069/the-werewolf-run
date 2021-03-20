@@ -1,0 +1,1 @@
+Sample sprites for walking
