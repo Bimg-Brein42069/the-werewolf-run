@@ -10,4 +10,4 @@ This game is best suited for arcades like TIMEZone, etc.(Powerups and speed limi
 
 For more details, just play the game
 
-(Since the game is in alpha state, these instructions do not make sense for now. Once I get time from college, I will continue development for this game. Trust me,I am a man of my word.)
+(Since the game is in alpha state, these instructions do not make sense for now. Once I get time from college, I will continue development for this game.)
