@@ -1,4 +1,5 @@
 import pygame
+from pygame.locals import *
 import math
 import random
 
@@ -14,47 +15,47 @@ class player_walk(pygame.sprite.Sprite):
         super(player_walk,self).__init__()
 
         self.walk=[]
-        self.walk.append(pygame.image.load('assasin/walk/walk1b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk1b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk1b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk1b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk1b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk1b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk2b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk2b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk2b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk2b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk2b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk2b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk3b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk3b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk3b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk3b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk3b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk3b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk4b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk4b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk4b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk4b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk4b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk5b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk5b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk5b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk5b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk5b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk5b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk6b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk6b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk6b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk6b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk6b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk6b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk7b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk7b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk7b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk7b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk7b.png'))
-        self.walk.append(pygame.image.load('assasin/walk/walk7b.png'))
+        self.walk.append(pygame.image.load('assasin/walk/walk1b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk1b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk1b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk1b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk1b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk1b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk2b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk2b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk2b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk2b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk2b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk2b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk3b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk3b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk3b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk3b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk3b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk3b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk4b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk4b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk4b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk4b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk4b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk5b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk5b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk5b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk5b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk5b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk5b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk6b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk6b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk6b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk6b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk6b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk6b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk7b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk7b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk7b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk7b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk7b.png').convert_alpha())
+        self.walk.append(pygame.image.load('assasin/walk/walk7b.png').convert_alpha())
 
         self.index = 0
 
@@ -78,18 +79,18 @@ class player_jump(pygame.sprite.Sprite):  # sprite collection of jumping man
         super(player_jump, self).__init__()
 
         self.jump = []
-        self.jump.append(pygame.image.load('assasin/jump/jump1b.png'))
-        self.jump.append(pygame.image.load('assasin/jump/jump2b.png'))
-        self.jump.append(pygame.image.load('assasin/jump/jump3b.png'))
-        self.jump.append(pygame.image.load('assasin/jump/jump4b.png'))
-        self.jump.append(pygame.image.load('assasin/jump/jumpe1b.png'))
-        self.jump.append(pygame.image.load('assasin/jump/jumpe2b.png'))
-        self.jump.append(pygame.image.load('assasin/jump/jumpe3b.png'))
-        self.jump.append(pygame.image.load('assasin/jump/jumpe4b.png'))
-        self.jump.append(pygame.image.load('assasin/jump/jump5b.png'))
-        self.jump.append(pygame.image.load('assasin/jump/jump6b.png'))
-        self.jump.append(pygame.image.load('assasin/jump/jump7b.png'))
-        self.jump.append(pygame.image.load('assasin/jump/jump8b.png'))
+        self.jump.append(pygame.image.load('assasin/jump/jump1b.png').convert_alpha())
+        self.jump.append(pygame.image.load('assasin/jump/jump2b.png').convert_alpha())
+        self.jump.append(pygame.image.load('assasin/jump/jump3b.png').convert_alpha())
+        self.jump.append(pygame.image.load('assasin/jump/jump4b.png').convert_alpha())
+        self.jump.append(pygame.image.load('assasin/jump/jumpe1b.png').convert_alpha())
+        self.jump.append(pygame.image.load('assasin/jump/jumpe2b.png').convert_alpha())
+        self.jump.append(pygame.image.load('assasin/jump/jumpe3b.png').convert_alpha())
+        self.jump.append(pygame.image.load('assasin/jump/jumpe4b.png').convert_alpha())
+        self.jump.append(pygame.image.load('assasin/jump/jump5b.png').convert_alpha())
+        self.jump.append(pygame.image.load('assasin/jump/jump6b.png').convert_alpha())
+        self.jump.append(pygame.image.load('assasin/jump/jump7b.png').convert_alpha())
+        self.jump.append(pygame.image.load('assasin/jump/jump8b.png').convert_alpha())
 
         self.index = 0
 
@@ -118,8 +119,8 @@ class player_roll(pygame.sprite.Sprite):
         self.roll=[]
         
         for i in range (0,30):
-            self.roll.append(pygame.image.load("assasin/roll/rolle1b.png"))
-            self.roll.append(pygame.image.load("assasin/roll/rolle3b.png"))
+            self.roll.append(pygame.image.load("assasin/roll/rolle1b.png").convert_alpha())
+            self.roll.append(pygame.image.load("assasin/roll/rolle3b.png").convert_alpha())
 
         self.index=0
 
@@ -143,48 +144,48 @@ class enemy_walk(pygame.sprite.Sprite):  # sprite collection of walking wolf
         super(enemy_walk, self).__init__()
 
         self.walk = []
-        self.walk.append(pygame.image.load('wolf/walk/walk1.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk1.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk1.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk1.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk1.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk1.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk1.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk2.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk2.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk2.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk2.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk2.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk2.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk2.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk3.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk3.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk3.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk3.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk3.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk3.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk3.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk4.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk4.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk4.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk4.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk4.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk4.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk4.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk5.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk5.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk5.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk5.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk5.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk5.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk5.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk6.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk6.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk6.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk6.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk6.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk6.png'))
-        self.walk.append(pygame.image.load('wolf/walk/walk6.png'))
+        self.walk.append(pygame.image.load('wolf/walk/walk1.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk1.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk1.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk1.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk1.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk1.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk1.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk2.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk2.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk2.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk2.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk2.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk2.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk2.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk3.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk3.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk3.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk3.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk3.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk3.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk3.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk4.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk4.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk4.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk4.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk4.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk4.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk4.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk5.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk5.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk5.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk5.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk5.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk5.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk5.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk6.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk6.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk6.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk6.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk6.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk6.png').convert_alpha())
+        self.walk.append(pygame.image.load('wolf/walk/walk6.png').convert_alpha())
 
         self.index = 0 + 3*offset
 
@@ -208,8 +209,8 @@ class obstacles(pygame.sprite.Sprite):
         super(obstacles,self).__init__()
 
         self.imglist=[]
-        self.imglist.append(pygame.image.load('obstacle.png'))
-        self.imglist.append(pygame.image.load('obstacle2.png'))
+        self.imglist.append(pygame.image.load('obstacle.png').convert_alpha())
+        self.imglist.append(pygame.image.load('obstacle2.png').convert_alpha())
         self.image = self.imglist[obstype]
         if not obstype:
             self.rect = pygame.Rect(x,y,138,174)
@@ -248,14 +249,14 @@ def f(x):
 def main():
     # initialize
     pygame.mixer.pre_init(44100,-16,2,512)
+    pygame.init()
     pygame.mixer.quit()
     pygame.mixer.init(44100,-16,2,512)
-    pygame.init()
     pygame.fastevent.init()
     clock = pygame.time.Clock()
 
     # create the screen
-    screen = pygame.display.set_mode((1024,768))
+    screen = pygame.display.set_mode((1024,768),DOUBLEBUF)
     
     #display the icon
     pygame.display.set_caption("Werewolf Run")
@@ -263,7 +264,7 @@ def main():
     pygame.display.set_icon(icon)
 
     #load the background
-    background = pygame.image.load("bg_enhanced.png")
+    background = pygame.image.load("bg_enhanced.png").convert()
     bg_x=0
     bg_x2=background.get_rect().width
     rec_width=background.get_rect().width
@@ -323,7 +324,7 @@ def main():
         bg_x2=(bg_x2+int(obstacleX_change))%bgmf - rec_width
 
         #check if the game is ruuning
-        for event in pygame.fastevent.get():
+        for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 exit()
 
@@ -380,13 +381,13 @@ def main():
         #roll
         if not(rolling or jumping):
             if keys[pygame.K_SPACE]:
-                man_jump_sound_channel.play(man_jump_Sound)
+                man_jump_Sound.play()
                 i=-300
                 jumping=True
                 rolling=False
             elif keys[pygame.K_DOWN]:
                 l=-100
-                man_roll_sound_channel.play(man_roll_Sound)
+                man_roll_Sound.play()
                 rolling=True
 
         spriteval=2*rolling+jumping
